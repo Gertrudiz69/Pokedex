@@ -1,0 +1,20 @@
+import React from 'react'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import BarChart from './components/charts/BarChart'
+import Navigation from './components/Navigation'
+import { HomePage, PokemonPage, SearchPage } from './pages'
+
+const AppRouter = () => {
+  return <Routes>
+    <Route path='/' element={<Navigation />}>
+      <Route index element={<HomePage />} />
+      <Route path='pokemon/:id' element={<PokemonPage />} />
+      <Route path='search' element={<SearchPage />} />
+      <Route path='chart' element={<BarChart />} />
+    </Route>
+
+    <Route path='*' element={<Navigate to='/' />} />
+  </Routes>
+}
+
+export default AppRouter
