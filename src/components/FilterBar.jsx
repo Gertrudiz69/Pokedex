@@ -5,7 +5,7 @@ import { TipoFilter } from './filter-components'
 
 const FilterBar = () => {
 
-	const { active, setActive } = useContext(PokemonContext)
+	const { active, setActive, handleCheckbox } = useContext(PokemonContext)
 
 	return (
 		<div className={`container-filters ${active ? 'active' : ''}`}>

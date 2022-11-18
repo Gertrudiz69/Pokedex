@@ -63,9 +63,9 @@ const PokemonProvider = ({ children }) => {
     getAllPokemons()
   }, [offset])
 
-  // useEffect(() => {
-  //   getGlobalPokemons()
-  // }, [])
+  useEffect(() => {
+    getGlobalPokemons()
+  }, [])
   
   const onClickLoadMore = () => {
     setOffset(offset + 50)
